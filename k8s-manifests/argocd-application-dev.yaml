@@ -1,0 +1,17 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: java-app-dev
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/george-cassar/java-app.git'
+    targetRevision: main
+    path: k8s-manifests/overlays/bog-dev
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: bog-dev
+  syncPolicy:
+    automated: null

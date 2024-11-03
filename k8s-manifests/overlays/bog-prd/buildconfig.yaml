@@ -1,0 +1,22 @@
+
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: java-app-build
+  namespace: bog-dev  # Replace with `bog-prd` for production environment
+spec:
+  source:
+    type: "Git"
+    git:
+      uri: "https://github.com/george-cassar/java-app.git"
+    contextDir: "app-code"
+  strategy:
+    type: "Docker"
+    dockerStrategy: {}
+  output:
+    to:
+      kind: "ImageStreamTag"
+      name: "java-app:latest"
+  triggers:
+    - type: "ImageChange"  # Trigger build on image changes
+    - type: "ConfigChange"  # Trigger build on configuration changes

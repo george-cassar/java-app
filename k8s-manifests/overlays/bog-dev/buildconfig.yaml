@@ -18,5 +18,5 @@ spec:
       kind: "ImageStreamTag"
       name: "java-app:latest"
   triggers:
-    - type: "ImageChange"  # Trigger build on image changes
+    #- type: "ImageChange"  # Trigger build on image changes
     - type: "ConfigChange"  # Trigger build on configuration changes

@@ -16,6 +16,7 @@ public class HelloWorld {
         server.setExecutor(null);
         server.start();
         System.out.println("Server started on port 8080");
+        System.out.println("Version 1");
     }
 
     static class HelloHandler implements HttpHandler {

@@ -5,7 +5,7 @@ namespace: bog-dev
 resources:
   - namespace.yaml
   - buildconfig.yaml
-  - route.yaml
+  - deployment.yaml
 images:
   - name: "java-app"
     newName: "image-registry.openshift-image-registry.svc:5000/bog-dev/java-app"

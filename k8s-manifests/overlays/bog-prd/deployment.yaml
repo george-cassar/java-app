@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: "image-registry.openshift-image-registry.svc:5000/java-app:latest"
+          image: "image-registry.openshift-image-registry.svc:5000/bog-prd/java-app:latest"
           ports:
             - containerPort: 8080

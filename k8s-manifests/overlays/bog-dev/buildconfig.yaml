@@ -3,7 +3,7 @@ apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
   name: java-app-build
-  namespace: bog-dev  # Replace with `bog-prd` for production environment
+  namespace: bog-dev
 spec:
   source:
     type: "Git"
@@ -18,5 +18,4 @@ spec:
       kind: "ImageStreamTag"
       name: "java-app:latest"
   triggers:
-    #- type: "ImageChange"  # Trigger build on image changes
-    - type: "ConfigChange"  # Trigger build on configuration changes
+    - type: "ConfigChange"

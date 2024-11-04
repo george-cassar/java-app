@@ -3,7 +3,7 @@ apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
   name: java-app-build
-  namespace: bog-dev  # Replace with `bog-prd` for production environment
+  namespace: bog-prd
 spec:
   source:
     type: "Git"

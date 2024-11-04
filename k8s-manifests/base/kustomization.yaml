@@ -1,8 +1,8 @@
 
 resources:
+  - imagestream.yaml
   - service.yaml
   - route.yaml
-  - imagestream.yaml
   - mysql-secret.yaml
   - mysql-pvc.yaml
   - mysql-deployment.yaml

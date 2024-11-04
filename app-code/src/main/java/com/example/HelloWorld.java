@@ -21,7 +21,7 @@ public class HelloWorld {
     static class HelloHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
-            String response = "Server started on port 8080 - version 2!";
+            String response = "Server started on port 8080 - version 1!";
             exchange.sendResponseHeaders(200, response.length());
             OutputStream os = exchange.getResponseBody();
             os.write(response.getBytes());

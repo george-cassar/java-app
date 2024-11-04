@@ -18,3 +18,14 @@ spec:
           image: "image-registry.openshift-image-registry.svc:5000/bog-dev/java-app:latest"
           ports:
             - containerPort: 8080
+  strategy:
+    type: RollingUpdate
+  triggers:
+    - type: "ImageChange"
+      imageChangeParams:
+        automatic: true
+        containerNames:
+          - "java-app"
+        from:
+          kind: "ImageStreamTag"
+          name: "java-app:latest"  # Refers to the ImageStreamTag updated by the BuildConfig

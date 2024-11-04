@@ -17,6 +17,10 @@ java-app/
     │   ├── service.yaml
     │   ├── imagestream.yaml
     │   └── kustomization.yaml
+    │   └── mysql-deployment.yaml
+    │   └── mysql-pvc.yaml
+    │   └── mysql-secret.yaml
+    │   └── mysql-service.yaml  
     └── overlays/              # Environment-specific overlays
         ├── bog-dev/           # Dev overlay with namespace and image configs
         │   ├── kustomization.yaml
@@ -26,7 +30,7 @@ java-app/
         └── bog-prd/           # Prod overlay with namespace and image configs
             ├── kustomization.yaml
             ├── namespace.yaml
-        │   ├── buildconfig.yaml
+            ├── buildconfig.yaml
             └── route.yaml
     └── argocd-applications/   # ArgoCD applications for each environment
         ├── argocd-application-dev.yaml
